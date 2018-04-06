@@ -1,9 +1,12 @@
 package xin.carryzheng.leetcode;
 
+import xin.carryzheng.Utils;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * #1
  * Created by zhengxin on 17/12/14.
  */
 public class TwoSum {
@@ -12,8 +15,8 @@ public class TwoSum {
 
         int[] ints = new int[]{2, 7, 11, 15};
 
-//        Util.traverse(TwoSum.twoSum(ints, 9));
-        Util.traverse(TwoSum.twoSum2(ints, 9));
+//        Utils.traverse(TwoSum.twoSum(ints, 9));
+        Utils.traverse(TwoSum.twoSum2(ints, 9));
 
     }
 
