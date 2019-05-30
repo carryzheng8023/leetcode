@@ -24,13 +24,13 @@ public class RemoveLinkedListElements {
         }
 
         ListNode(int[] arr) {
-            if(arr == null || arr.length == 0)
+            if (arr == null || arr.length == 0)
                 throw new IllegalArgumentException("数组不能为空！");
 
             this.val = arr[0];
 
             ListNode cur = this;
-            for (int i=1; i<arr.length; i++){
+            for (int i = 1; i < arr.length; i++) {
                 cur.next = new ListNode(arr[i]);
                 cur = cur.next;
             }
@@ -41,7 +41,7 @@ public class RemoveLinkedListElements {
         public String toString() {
             StringBuilder sb = new StringBuilder();
             ListNode cur = this;
-            while (cur != null){
+            while (cur != null) {
                 sb.append(cur.val).append("->");
                 cur = cur.next;
             }
@@ -88,6 +88,17 @@ public class RemoveLinkedListElements {
         return dummyHead.next;
     }
 
+    public ListNode removeElements3(ListNode head, int val) {
+
+        if (head == null)
+            return null;
+
+        head.next = removeElements3(head.next, val);
+
+        return head.val == val ? head.next : head;
+
+    }
+
     public static void main(String[] args) {
         int[] nums = {1, 2, 6, 3, 4, 5, 6};
 
@@ -98,6 +109,8 @@ public class RemoveLinkedListElements {
         System.out.println(res);
         ListNode res2 = new RemoveLinkedListElements().removeElements2(head, 6);
         System.out.println(res2);
+        ListNode res3 = new RemoveLinkedListElements().removeElements3(head, 6);
+        System.out.println(res3);
     }
 
 
