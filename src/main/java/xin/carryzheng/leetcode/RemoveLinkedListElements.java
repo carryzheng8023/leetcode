@@ -1,5 +1,6 @@
 package xin.carryzheng.leetcode;
 
+
 /**
  * #203
  * <p>
@@ -13,6 +14,15 @@ package xin.carryzheng.leetcode;
  * @date 2019-05-30 14:37:50
  */
 public class RemoveLinkedListElements {
+
+    private class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
 
     public ListNode removeElements(ListNode head, int val) {
 
@@ -49,5 +59,6 @@ public class RemoveLinkedListElements {
 
         return dummyHead.next;
     }
+
 
 }

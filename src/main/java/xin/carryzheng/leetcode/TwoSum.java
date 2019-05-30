@@ -1,6 +1,6 @@
 package xin.carryzheng.leetcode;
 
-import xin.carryzheng.Utils;
+import xin.carryzheng.utils.Utils;
 
 import java.util.HashMap;
 import java.util.Map;

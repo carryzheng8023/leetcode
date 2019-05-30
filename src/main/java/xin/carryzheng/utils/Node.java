@@ -1,4 +1,4 @@
-package xin.carryzheng;
+package xin.carryzheng.utils;
 
 /**
  * @author zhengxin

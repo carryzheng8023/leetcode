@@ -1,4 +1,4 @@
-package xin.carryzheng;
+package xin.carryzheng.utils;
 
 /**
  * Created by zhengxin on 17/12/14.

@@ -1,8 +1,8 @@
 package xin.carryzheng.leetcode;
 
 
-import xin.carryzheng.Node;
-import xin.carryzheng.Utils;
+import xin.carryzheng.utils.Node;
+import xin.carryzheng.utils.Utils;
 
 /**
  * 108
