@@ -93,6 +93,16 @@ public class RemoveLinkedListElements {
         if (head == null)
             return null;
 
+
+//        ListNode res = removeElements3(head.next, val);
+//        if(head.val == val)
+//            return res;
+//        else {
+//            head.next = res;
+//            return head;
+//        }
+
+
         head.next = removeElements3(head.next, val);
 
         return head.val == val ? head.next : head;
