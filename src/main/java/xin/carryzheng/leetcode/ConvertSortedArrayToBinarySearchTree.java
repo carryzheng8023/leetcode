@@ -5,7 +5,8 @@ import xin.carryzheng.utils.Node;
 import xin.carryzheng.utils.Utils;
 
 /**
- * 108
+ * #108
+ *
  * 题意是把一个有序数组转化为一棵二叉搜索树，二叉搜索树具有以下性质：
  *
  * 1.若任意节点的左子树不空，则左子树上所有节点的值均小于它的根节点的值；
@@ -22,7 +23,7 @@ import xin.carryzheng.utils.Utils;
  * @author zhengxin
  * @date 2018-04-04 08:53:31
  */
-public class ConvertSortedArraytoBinarySearchTree {
+public class ConvertSortedArrayToBinarySearchTree {
 
 
 
