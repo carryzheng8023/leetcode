@@ -1,5 +1,9 @@
 package xin.carryzheng.leetcode;
 
+import xin.carryzheng.utils.ListNode;
+
+import static xin.carryzheng.utils.Utils.traverse;
+
 /**
  * #2
  *
@@ -55,31 +59,6 @@ public class AddTwoNumbers {
         return dummy.next;
     }
 
-    static void traverse(ListNode l){
 
-        while (null != l){
-            System.out.print(l.val);
-            System.out.print("\t");
-            l = l.next;
-        }
-
-
-    }
 }
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}

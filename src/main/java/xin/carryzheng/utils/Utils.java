@@ -29,5 +29,14 @@ public class Utils {
         inOrder(node.right);
     }
 
+    public static void traverse(ListNode l){
+
+        while (null != l){
+            System.out.print(l.val);
+            System.out.print("\t");
+            l = l.next;
+        }
+    }
+
 
 }
