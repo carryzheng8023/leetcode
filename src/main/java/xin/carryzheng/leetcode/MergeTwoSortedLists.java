@@ -1,5 +1,9 @@
 package xin.carryzheng.leetcode;
 
+import xin.carryzheng.utils.ListNode;
+
+import static xin.carryzheng.utils.Utils.traverse;
+
 /**
  * #21
  * 题意是用一个新链表来合并两个已排序的链表，
@@ -13,63 +17,35 @@ public class MergeTwoSortedLists {
 
     public static void main(String[] args){
 
-        Node head1 = new Node(1, new Node(2, new Node(4)));
+        ListNode l1 = new ListNode(1, new ListNode(2, new ListNode(4, null)));
+        ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4, null)));
 
-        Node head2 = new Node(1, new Node(3, new Node(4)));
-
-        traverse(mergeTwoLists(head1, head2));
-
-    }
-
-
-    private static class Node{
-
-        int data;
-        Node next;
-
-        Node(int data){
-            this.data = data;
-            this.next = null;
-        }
-
-        Node(int data, Node node){
-            this.data = data;
-            this.next = node;
-        }
+        traverse(new MergeTwoSortedLists().mergeTwoLists(l1, l2));
 
     }
 
-    private static Node mergeTwoLists(Node l1, Node l2) {
 
-        Node head = new Node(0);
-        Node temp = head;
+
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+
+        ListNode dummy = new ListNode();
+        ListNode t = dummy;
 
         while (l1 != null && l2 != null){
-
-            if(l1.data < l2.data){
-                temp.next = l1;
+            if (l1.val < l2.val){
+                t.next = l1;
                 l1 = l1.next;
             }else {
-                temp.next = l2;
+                t.next = l2;
                 l2 = l2.next;
             }
-
-            temp = temp.next;
+            t = t.next;
 
         }
 
-        temp.next = l1 != null ? l1 : l2;
+        t.next = l1 != null ? l1 : l2;
 
-        return head.next;
-
-
-    }
-
-    private static void traverse(Node head){
-
-        for (; head != null; head = head.next){
-            System.out.print(head.data + "\t");
-        }
+        return dummy.next;
 
     }
 
