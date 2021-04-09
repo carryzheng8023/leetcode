@@ -33,7 +33,7 @@ public class MaximumSubarray {
 
             dp = nums[i] + (dp > 0 ? dp : 0);
 
-            if (dp > max) max = dp;
+            max = dp > max ? dp : max;
 
         }
 

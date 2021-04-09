@@ -15,7 +15,7 @@ public class GroupAnagrams {
 //        System.out.println(new GroupAnagrams().groupAnagrams(new String[]{"eat", "ate", "tea", "tan", "nat", "bat"}));
 //        System.out.println(new GroupAnagrams().groupAnagrams(new String[]{"abc", "efg"}));
 
-        //["bdddddddddd","bbbbbbbbbbc"]
+
         System.out.println(new GroupAnagrams().groupAnagrams(new String[]{"bdddddddddd", "bbbbbbbbbbc"}));
 
     }
@@ -36,6 +36,7 @@ public class GroupAnagrams {
             }
             StringBuilder sb = new StringBuilder("");
             for (int i=0; i<26; i++)
+                //["bdddddddddd","bbbbbbbbbbc"] 这两个字符串join完会产生一样的key，所有中间加"."处理
                 sb.append(chars[i]).append(".");
 
             String key = sb.toString();
