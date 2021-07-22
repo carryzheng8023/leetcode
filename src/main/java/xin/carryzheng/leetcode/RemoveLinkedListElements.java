@@ -24,8 +24,9 @@ public class RemoveLinkedListElements {
         }
 
         ListNode(int[] arr) {
-            if (arr == null || arr.length == 0)
-                throw new IllegalArgumentException("数组不能为空！");
+            if (arr == null || arr.length == 0) {
+              throw new IllegalArgumentException("数组不能为空！");
+            }
 
             this.val = arr[0];
 
@@ -54,18 +55,21 @@ public class RemoveLinkedListElements {
 
     public ListNode removeElements(ListNode head, int val) {
 
-        while (head != null && head.val == val)
-            head = head.next;
+        while (head != null && head.val == val) {
+          head = head.next;
+        }
 
-        if (head == null)
-            return null;
+        if (head == null) {
+          return null;
+        }
 
         ListNode prev = head;
         while (prev.next != null) {
-            if (prev.next.val == val)
-                prev.next = prev.next.next;
-            else
-                prev = prev.next;
+            if (prev.next.val == val) {
+              prev.next = prev.next.next;
+            } else {
+              prev = prev.next;
+            }
         }
 
         return head;
@@ -79,10 +83,11 @@ public class RemoveLinkedListElements {
 
         ListNode prev = dummyHead;
         while (prev.next != null) {
-            if (prev.next.val == val)
-                prev.next = prev.next.next;
-            else
-                prev = prev.next;
+            if (prev.next.val == val) {
+              prev.next = prev.next.next;
+            } else {
+              prev = prev.next;
+            }
         }
 
         return dummyHead.next;
@@ -90,8 +95,9 @@ public class RemoveLinkedListElements {
 
     public ListNode removeElements3(ListNode head, int val) {
 
-        if (head == null)
-            return null;
+        if (head == null) {
+          return null;
+        }
 
 
 //        ListNode res = removeElements3(head.next, val);

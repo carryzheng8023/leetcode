@@ -26,18 +26,29 @@ public class LongestCommonPrefix {
     public static String longestCommonPrefix(String[] strs){
 
         int len = strs.length;
-        if (len == 0) return "";
-        if (len == 1) return strs[0];
+        if (len == 0) {
+          return "";
+        }
+        if (len == 1) {
+          return strs[0];
+        }
 
         int minLen = Integer.MAX_VALUE;
 
-        for(String str : strs)
-            minLen =  Math.min(minLen, str.length());
+        for(String str : strs) {
+          minLen =  Math.min(minLen, str.length());
+        }
 
 
         for(int j=0; j<minLen; ++j) //从第j位开始比较 所以从0开始
-            for(int i=1; i<strs.length; ++i) //所有的字符串都按位和第一个字符串的每位进行比较，不相等就退出
-                if(strs[0].charAt(j) != strs[i].charAt(j)) return strs[0].substring(0, j);
+        {
+          for(int i=1; i<strs.length; ++i) //所有的字符串都按位和第一个字符串的每位进行比较，不相等就退出
+          {
+            if (strs[0].charAt(j) != strs[i].charAt(j)) {
+              return strs[0].substring(0, j);
+            }
+          }
+        }
 
         return strs[0].substring(0, minLen);
 

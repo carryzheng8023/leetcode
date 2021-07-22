@@ -17,14 +17,17 @@ public class PalindromeNumber {
 
     public static boolean isPalindrome(int x){
 
-        if(x < 0 || x % 10 == 0) return false;
+        if(x < 0 || x % 10 == 0) {
+          return false;
+        }
 
         int copyX = x;
 
         int reverse = 0;
 
-        for (; copyX > 0; copyX /= 10)
-            reverse = reverse * 10 + copyX % 10;
+        for (; copyX > 0; copyX /= 10) {
+          reverse = reverse * 10 + copyX % 10;
+        }
 
         return x == reverse;
 

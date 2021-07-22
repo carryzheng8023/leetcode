@@ -38,14 +38,18 @@ public class ConvertSortedArrayToBinarySearchTree {
 
     public static Node sortedArrayToBST(int[] nums) {
 
-        if (nums == null || nums.length == 0) return null;
+        if (nums == null || nums.length == 0) {
+            return null;
+        }
 
         return helper(nums, 0, nums.length - 1);
     }
 
     private static Node helper(int[] nums, int left, int right) {
 
-        if(left > right) return null;
+        if(left > right) {
+            return null;
+        }
         int mid = left + (right - left) / 2;
 
         Node node = new Node(nums[mid]);

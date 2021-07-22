@@ -19,8 +19,9 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public static int lengthOfLongestSubstring(String s) {
 
-        if (null == s || "".equals(s))
-            return 0;
+        if (null == s || "".equals(s)) {
+          return 0;
+        }
 
         char[] chars = s.toCharArray();
 

@@ -22,17 +22,24 @@ public class ValidParentheses {
 
     public static boolean isValid(String s){
 
-        if("".equals(s.trim())) return false;
+        if("".equals(s.trim())) {
+          return false;
+        }
 
         char[] stack = new char[s.length() + 1];
 
         int top = 1;
 
         for(char c : s.toCharArray()){
-            if(c == '(' || c == '[' || c == '{') stack[top++] = c;
-            else if(c == ')' && stack[--top] != '(') return false;
-            else if(c == ']' && stack[--top] != '[') return false;
-            else if(c == '}' && stack[--top] != '{') return false;
+            if(c == '(' || c == '[' || c == '{') {
+              stack[top++] = c;
+            } else if(c == ')' && stack[--top] != '(') {
+              return false;
+            } else if(c == ']' && stack[--top] != '[') {
+              return false;
+            } else if(c == '}' && stack[--top] != '{') {
+              return false;
+            }
         }
 
         return top == 1;
